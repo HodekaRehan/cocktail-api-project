@@ -2,46 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
     <title>Cocktails</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <form class="search-form">
-      <h2>Cocktails Api</h2>
+      <h2>cocktails API</h2>
       <input
         type="text"
-        placeholder="Search your favourite cocktail"
+        placeholder="search your favorite cocktail"
         name="drink"
       />
     </form>
-
     <section class="section cocktails">
-      <!-- loading gif -->
       <article class="loading">
         <img src="./loading.gif" alt="loading" />
       </article>
-
-      <!-- add text to display msg if drinks are not found -->
       <h2 class="title"></h2>
-
-      <div class="section-center">
-        <!-- single drink -->
-        <!-- <a href="drink.html">
-          <article class="cocktail" data-id="1">
-            <img src="./cocktail.jpg" alt="cocktail" />
-            <h3>martini</h3>
-          </article>
-        </a> -->
-        <!-- end of single drink -->
-      </div>
+      <div class="section-center"></div>
     </section>
     <script type="module" src="./app.js"></script>
   </body>

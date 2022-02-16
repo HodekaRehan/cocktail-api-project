@@ -6,13 +6,9 @@ const displayDrinks = ({ drinks }) => {
   const title = get(".title");
 
   if (!drinks) {
-    //hideloading
+    // hide loading
     hideLoading();
-
-    //set error msg
-    title.textContent = "Sorry, No drinks matched your search";
-
-    //hide rest of the drinks if search is not matched
+    title.textContent = "sorry, no drinks matched your search";
     section.innerHTML = null;
     return;
   }
@@ -21,8 +17,7 @@ const displayDrinks = ({ drinks }) => {
     .map((drink) => {
       const { idDrink: id, strDrink: name, strDrinkThumb: image } = drink;
 
-      return ` 
-        <a href="drink.html">
+      return `<a href="drink.html">
           <article class="cocktail" data-id="${id}">
             <img src="${image}" alt="${name}" />
             <h3>${name}</h3>
@@ -30,8 +25,6 @@ const displayDrinks = ({ drinks }) => {
         </a>`;
     })
     .join("");
-
-  //hide loading
   hideLoading();
   title.textContent = "";
   section.innerHTML = newDrinks;
